@@ -1,0 +1,7 @@
+:root {
+    --bg-primary    : rgb(11, 3, 3);
+    --fg-primary    : white;
+    --fg-secondary  : rgb(42, 255, 148);
+    --ac-primary    : rgb(252, 65, 82);
+    --ac-secondary  : yellow;
+}

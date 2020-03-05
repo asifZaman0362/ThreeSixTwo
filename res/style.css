@@ -1,15 +1,9 @@
-:root {
-    --bg-primary    : rgb(11, 3, 3);
-    --fg-primary    : white;
-    --fg-secondary  : rgb(42, 255, 148);
-    --ac-primary    : rgb(252, 65, 82);
-    --ac-secondary  : yellow;
-}
+@import url('colors.css');
 
 body {
     background: rgb(11, 3, 3);
     font-family: 'Share Tech Mono';
-    color: var(--accent-color);
+    color: var(--ac-primary);
     padding: 10pt 20pt 10pt;
 }
 
@@ -19,7 +13,7 @@ nav {
 }
 
 header {
-    color: var(--secondary-color);
+    color: var(--fg-secondary);
     font-weight: bold;
     font-size: 48px;
 }
@@ -28,21 +22,21 @@ header {
     display:block;
     margin: 10pt 0pt 10pt 0pt;
     height:2px;
-    background: linear-gradient(to right, yellow 50%, var(--main-color) 50%)
+    background: linear-gradient(to right, var(--fg-secondary) 50%, var(--ac-secondary) 50%)
 }
 
 .horizontal-line-2 { 
     display:block;
     margin: 10pt 0pt 10pt 0pt;
     height:2px;
-    background: linear-gradient(to right, var(--secondary-color) 50%, var(--main-color) 50% 60%, rgba(0, 0, 0, 0) 60%)
+    background: linear-gradient(to right, var(--fg-secondary) 50%, var(--ac-secondary) 50% 60%, rgba(0, 0, 0, 0) 60%)
 }
 
 .horizontal-line-3 {
     display:block;
     margin: 10pt 0pt 10pt 0pt;
     height:2px;
-    background: linear-gradient(to right, var(--secondary-color) 20%, rgba(0, 0, 0, 0) 20%)
+    background: linear-gradient(to right, var(--fg-secondary) 20%, rgba(0, 0, 0, 0) 20%)
 }
 
 nav ul {
@@ -55,15 +49,16 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: medium;
+    font-size: 150%;
     font-family: 'Share Tech Mono';
-    color: var(--main-color);
+    color: var(--ac-secondary);
     display: inline-block;
     text-transform: uppercase;
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    text-decoration: none;
 }
 
 nav ul li a::after {
@@ -76,19 +71,28 @@ nav ul li a::after {
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--fg-secondary);
     font-weight: bold;
     text-decoration-line: underline;
 }
 
 h1 {
-    color: var(--secondary-color);
+    color: var(--fg-secondary);
     font-weight: bold;
     text-transform: uppercase;
 }
 
 h2 {
-    color: var(--secondary-color);
+    color: var(--fg-secondary);
     font-weight: bold;
     text-transform: uppercase;
+}
+
+a {
+    color: var(--ac-tertiary);
+    transition: 0.5s;
+}
+
+a:hover {
+    color: var(--ac-secondary);
 }

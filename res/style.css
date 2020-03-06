@@ -1,88 +1,65 @@
 @import url('colors.css');
 
 body {
-    background: rgb(11, 3, 3);
-    font-family: 'Share Tech Mono';
-    color: var(--ac-primary);
-    padding: 10pt 20pt 10pt;
-}
-
-nav {
-    opacity: 80;
-    text-align: center;
+    font-size: 12px;
+    font-family: "Share Tech Mono";
+    background: var(--bg-primary);
+    margin: 0;
+    padding: 0;
 }
 
 header {
-    color: var(--fg-secondary);
-    font-weight: bold;
-    font-size: 48px;
+    background: var(--ac-secondary);
+    color: var(--bg-primary);
+    height: 100px;
+    overflow: hidden;
 }
 
-.horizontal-line-1 { 
-    display:block;
-    margin: 18px 0pt 18px 0pt;
-    height:2px;
-    background: linear-gradient(to right, var(--fg-secondary) 50%, var(--ac-secondary) 50%)
-}
-
-.horizontal-line-2 { 
-    display:block;
-    margin: 18px 0pt 18px 0pt;
-    height:2px;
-    background: linear-gradient(to right, var(--fg-secondary) 50%, var(--ac-secondary) 50% 60%, rgba(0, 0, 0, 0) 60%)
-}
-
-.horizontal-line-3 {
-    display:block;
-    margin: 18px 0pt 18px 0pt;
-    height:2px;
-    background: linear-gradient(to right, var(--fg-secondary) 20%, rgba(0, 0, 0, 0) 20%)
-}
-
-nav ul {
-    padding: 0%;
-}
-
-nav ul li {
-    display: inline;
-    padding: 5pt;
-}
-
-nav ul li a {
-    font-size: 120%;
-    font-family: 'Share Tech Mono';
-    color: var(--ac-secondary);
-    display: inline-block;
-    text-transform: uppercase;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    color: var(--fg-secondary);
-    text-decoration-line: underline;
-}
-
-h1 {
-    color: var(--ac-secondary);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-h2 {
-    color: var(--ac-secondary);
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-a {
-    color: var(--ac-tertiary);
+header #logo {
+    float: left;
+    text-align: left;
+    padding: 17px 5%;
+    background: var(--ac-secondary);
+    width: 10%;
     transition: 0.5s;
 }
 
-a:hover {
-    color: var(--ac-secondary);
+#logo p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+header nav {
+    float: right;
+    text-align: right;
+    width: 70%;
+    padding: 0 5%;
+    margin: 0;
+    background: var(--ac-secondary);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 0 0 3%;
+    line-height: 100px;
+    height: 100px;
+}
+
+header nav ul li a {
+    color: var(--bg-primary);
+    font-size: 150%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    /* color: var(--ac-tertiary); */
+    text-decoration: underline;
 }

@@ -11,6 +11,10 @@ html {
     display: none;
 }
 
+#logo {
+    transition: 1s;
+}
+
 body {
     font-size: 12px;
     font-family: "Share Tech Mono";
@@ -20,7 +24,7 @@ body {
     transition: 1s;
 }
 
-header {
+header.sticky {
     background: var(--ac-secondary);
     color: var(--bg-primary);
     height: 100px;
@@ -30,7 +34,7 @@ header {
     transition: 1s;
 }
 
-header #logo {
+header.sticky #logo {
     float: left;
     text-align: left;
     padding: 17px 5%;
@@ -39,14 +43,26 @@ header #logo {
     transition: 0.5s;
 }
 
-#logo p {
+.sticky #logo {
     margin: 0;
     padding: 0;
     font-weight: bold;
+    transition: 1s;
+}
+
+.sticky #logo h1 {
+    font-size: 48px;
+    margin: 0;
     line-height: 1em;
 }
 
-header nav {
+.sticky #logo h2 {
+    font-size: 18px;
+    margin: 0;
+    line-height: 1em;
+}
+
+header.sticky nav {
     float: right;
     text-align: right;
     width: 70%;
@@ -55,91 +71,103 @@ header nav {
     background: var(--ac-secondary);
 }
 
-header nav ul {
+header.sticky nav ul {
     list-style: none;
     margin: 0;
 }
 
-header nav ul li {
+header.sticky nav ul li {
     display: inline-block;
     padding: 0 0 0 3%;
     line-height: 100px;
     height: 100px;
 }
 
-header nav ul li a {
+header.sticky nav ul li a {
     color: var(--bg-primary);
     font-size: 150%;
     text-decoration: none;
     transition: 0.3s;
 }
 
-header nav ul li a:hover {
+header.sticky nav ul li a:hover {
     /* color: var(--ac-tertiary); */
     text-decoration: underline;
 }
 
-#static {
+.sticky hr, .sticky i {
+    visibility: hidden;
+}
+
+.static {
     background: var(--ac-secondary);
     color: var(--bg-primary);
     text-align: center;
     width: 100%;
     height: 100vh;
+    transition: 1s;
 }
 
-#static h1 {
+.static h1 {
     font-size: 120px;
     margin: 0;
     padding: 100px 0 0;
+    transition: 1s;
 }
 
-#static h2 {
+.static h2 {
     font-size: 44px;
     margin: 0 0 50px;
+    transition: 1s;
 }
 
-#static hr {
+.static hr {
     height: 3px;
     border: none;
     width: 80%;
     margin-bottom: 20px;
+    transition: 1s;
 }
 
-#static hr#line1 {
+.static hr#line1 {
     background: linear-gradient(to right, var(--ac-primary) 50%, var(--fg-secondary) 50% 100%);
 }
 
-#static hr#line2 {
+.static hr#line2 {
     background: linear-gradient(to right, var(--ac-primary) 50%, var(--fg-secondary) 50% 70%, transparent 70% 100%);
 }
 
-#static hr#line3 {
+.static hr#line3 {
     background: linear-gradient(to right, var(--ac-primary) 30%, transparent 30% 100%);
 }
 
-#static nav ul {
-    margin-top: 70px;
-    list-style: none;
+.static nav {
+    margin-top: 100px;
 }
 
-#static nav ul li {
+.static nav ul {
+    list-style: none;
+    transition: 1s;
+}
+
+.static nav ul li {
     display: inline-block;
 }
 
-#static nav ul li a {
+.static nav ul li a {
     color: var(--bg-primary);
     font-size: 200%;
-    padding: 30px;
+    padding: 0 30px;
     text-decoration: none;
     font-weight: normal;
 }
 
-#static a:hover, #static a:active {
+.static a:hover, .static a:active {
     color: var(--ac-primary);
     text-decoration: underline;
 }
 
-#static .right a:hover, #static .right a:active {
+.static .right a:hover, .static .right a:active {
     color: var(--fg-secondary);
     text-decoration: underline;
 }
@@ -171,11 +199,11 @@ a.iconic:hover {
     color: var(--fg-secondary);
 }
 
-#static a.iconic {
+.static a.iconic {
     display: block;
 }
 
-#static a.iconic:hover {
+.static a.iconic:hover {
     transform: scale(1.3);
 }
 

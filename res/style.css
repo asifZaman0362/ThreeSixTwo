@@ -211,6 +211,10 @@ a.iconic:hover {
     transform: scale(1.3);
 }
 
+.sticky .divider {
+    display: none;
+}
+
 footer {
     text-align: left;
     background: var(--ac-secondary);

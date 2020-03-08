@@ -15,6 +15,10 @@ html {
     transition: 1s;
 }
 
+#logo h1, #logo h2 {
+    color: var(--bg-primary);
+}
+
 body {
     font-size: 12px;
     font-family: "Share Tech Mono";
@@ -196,7 +200,7 @@ a.iconic {
 }
 
 a.iconic:hover {
-    color: var(--fg-secondary);
+    color: var(--ac-primary);
 }
 
 .static a.iconic {
@@ -216,4 +220,19 @@ footer {
 
 footer h1 {
     font-size: 36px;
+    color: var(--bg-primary);
+}
+
+#content {
+    padding: 5%;
+    color: var(--fg-secondary);
+    font-size: 150%;
+}
+
+h1, h2, h3 {
+    color: var(--ac-secondary);
+}
+
+.centered {
+    text-align: center;
 }

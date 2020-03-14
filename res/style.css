@@ -17,6 +17,7 @@ html {
 
 #logo h1, #logo h2 {
     color: var(--bg-primary);
+    font-family: "Share Tech Mono";
 }
 
 body {
@@ -231,6 +232,7 @@ footer h1 {
     padding: 5%;
     color: var(--fg-secondary);
     font-size: 150%;
+    font-family: "Share Tech";
 }
 
 h1, h2, h3 {
@@ -239,4 +241,63 @@ h1, h2, h3 {
 
 .centered {
     text-align: center;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.column {
+    flex-wrap: wrap;
+    flex: 33.33%;
+    width: 33.33%;
+}
+
+@media screen and (max-width: 720px) {
+    .column {
+        flex: 100%;
+        width: 100%;
+    }
+}
+
+.column .card .img_container {
+    padding: 0;
+    width: 100%;
+    height: 250px;
+}
+.column .card .img_container img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    padding: 0;
+}
+
+.card {
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card_content {
+    background: var(--ac-secondary);
+    color: black;
+    padding: 10px;
+}
+
+.card_content h1 {
+    color: black;
+}
+
+a {
+    color: var(--ac-primary);
+    text-decoration: none;
+    transition: 1s;
+}
+
+a:hover {
+    color: var(--fg-primary);
 }

@@ -37,6 +37,7 @@ header.sticky {
     position: sticky;
     top: 0;
     transition: 1s;
+    z-index: 99999;
 }
 
 header.sticky #logo {
@@ -153,6 +154,7 @@ header.sticky nav ul li a:hover {
 .static nav ul {
     list-style: none;
     transition: 1s;
+    padding: 0;
 }
 
 .static nav ul li {
@@ -162,7 +164,7 @@ header.sticky nav ul li a:hover {
 .static nav ul li a {
     color: var(--bg-primary);
     font-size: 200%;
-    padding: 0 30px;
+    padding: 0 1vw;
     text-decoration: none;
     font-weight: normal;
 }
@@ -240,6 +242,7 @@ h1, h2, h3 {
 }
 
 .centered {
+    display: block;
     text-align: center;
 }
 
@@ -279,7 +282,7 @@ h1, h2, h3 {
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .card_content {

@@ -7,11 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../res/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="src/main.js"></script>
     <title>HOME | 362BITS</title>
 </head>
-<body>
+<body id="body">
     <header class="static">
+        <a href="javascript:void(0);" onclick="scrollUp()" style="text-decoration: none;">
         <div id="logo">
             <h1>362</h1>
             <h2>| BITS |</h2>
@@ -19,23 +19,22 @@
             <hr id="line2">
             <hr id="line3">
         </div>
+        </a>
         <br class="divider"><br class="divider"><br class="divider">
         <nav>
             <ul>
-                <li class="left"><a href="">HOME</a></li>
-                <li class="left"><a href="about.html">INFO</a></li>
-                <li class="left"><a href="store.html">SHOP</a></li>
-                <li class="right"><a href="games.html">GAMES</a></li>
-                <li class="right"><a href="blog.html">BLOG</a></li>
-                <li class="right"><a href="forum.html">FORUM</a></li>
+                <li class="left"><a href="about.html">ABOUT</a></li>
+                <li class="left"><a href="store.html">STORE</a></li>
+                <li class="left"><a href="games.html">GAMES</a></li>
+                <li class="left"><a href="blog.html">BLOGS</a></li>
+                <li class="left"><a href="forum.html">FORUM</a></li>
             </ul>
         </nav>
         <br><br><br><br>
-        <a href="#content" class="iconic"><i class="im im-angle-down"></i></a>
+        <a href="javascript:void(0);" onclick="scrollDown()" class="iconic"><i class="im im-angle-down"></i></a>
     </header>
     <div id="content">
         <h1>WELCOME!</h1>
-        <br>
         <p>Welcome to 362bits.com. This is my digital home. Take a look around and see if you find anything interesting. If you want to know me a little better check <a href="about.html">this page</a> out.</p>
         <br>
         <div class="section" id="projects">
@@ -73,7 +72,7 @@
                     <div class="card">
                         <div class="card_content">
                             <h1>html-modules</h1>
-                            <p>A simple and small collection of html thingies that I use frequently when making websites. Maybe it can come in handy for you too?</p>
+                            <p>A simple and small collection of html thingies that I use frequently when making websites. Maybe it will come in handy for you too?</p>
                             <div class="img_container">
                                 <p>This is supposed to be an image but I don't have one yet. So TEXT!</p>
                             </div>
@@ -81,9 +80,9 @@
                     </div>
                     </a>
                 </div>
-                <h1>That's all for now. I do have some more projects. You can check them in my <a href="https://github.com/asifZaman0362"></a> github.</h1>
             </div>
-            <a class="centred" href="projects.html">VIEW MORE</a>
+            <br><br>
+            <a class="centered" href="projects.html">VIEW MORE</a>
         </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -95,7 +94,7 @@
         <a href="https://twitter.com/AshifZaman5" class="iconic"><i class="im im-twitter"></i></a>
         <a href="https://facebook.com" class="iconic"><i class="im im-facebook"></i></a>
         <a href="mailto:zero@362bits.com" class="iconic"><i class="im im-mail"></i></a>
-        <a href="mailto:zero362001@protonmail.com" class="iconic"><i class="im im-mail"></i></a>
     </footer>
 </body>
+<script src="src/main.js"></script>
 </html>

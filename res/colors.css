@@ -1,8 +1,8 @@
 :root {
     --bg-primary    : rgb(11, 3, 3);
     --fg-primary    : white;
-    --fg-secondary  : rgb(42, 255, 148);
-    --ac-primary    : rgb(252, 65, 82);
+    --fg-secondary  : rgb(252, 65, 82);
+    --ac-primary    : rgb(42, 255, 148); 
     --ac-secondary  : yellow;
     --ac-tertiary   : rgb(0, 0, 255);
 }

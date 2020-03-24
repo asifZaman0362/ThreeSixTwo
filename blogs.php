@@ -7,7 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Share+Tech+Mono&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../res/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <title>ABOUT | 362BITS</title>
+    <?php
+        define(WP_USE_THEMES, false);
+        require('blog/wp-blog-header.php');
+    ?>
+    <title>BLOG | 362BITS</title>
 </head>
 <body id="body">
     <header class="sticky">
@@ -27,7 +31,7 @@
                 <li class="left"><a href="about.html">ABOUT</a></li>
                 <li class="left"><a href="store.html">STORE</a></li>
                 <li class="left"><a href="games.html">GAMES</a></li>
-                <li class="left"><a href="blogs.php">BLOGS</a></li>
+                <li class="left"><a href="blog.html">BLOGS</a></li>
                 <li class="left"><a href="forum.html">FORUM</a></li>
             </ul>
         </nav>
@@ -35,10 +39,17 @@
         <a href="javascript:void(0);" onclick="scrollDown()" class="iconic"><i class="im im-angle-down"></i></a>
     </header>
     <div id="content">
-        <h1>HELLO!</h1>
-        <p>I am Asif Zaman. A computer enthusiast, designer and avid video game lover. I am 19 years old and I live in a small town in Assam, India. In my spare time I make <a href="games.html">games</a> as well as a bunch of other stuff in my computer. I love to make things and I believe that making things is what humans are for. I am not the most outgoing type and I am very picky about everything from food to music.</p>
-        <h1>SOCIAL MEDIA</h1>
-        <p>Not quite the social butterfly but here's my <a href="https://twitter.com/AshifZaman5">twitter</a>, <a href="https://reddit.com/u/zero362001">reddit</a> and <a href="https://discord.gg/qYFSWYz">discord server</a>.</p>
+        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+        <div class="post">
+            <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+            <small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
+            <div class="entry">
+                <?php the_content(); ?>
+            </div>
+        </div>
+        <?php endwhile; else : ?>
+        <p><?php esc_html_e('Nothing here :)');?></p>
+        <?php endif; ?>
     </div>
     <footer>
         <h1>CONTACT</h1>

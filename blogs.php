@@ -44,7 +44,7 @@
             <h2><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
             <small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
             <div class="entry">
-                <?php the_content(); ?>
+                <?php the_content('Read More'); ?>
             </div>
         </div>
         <?php endwhile; else : ?>
